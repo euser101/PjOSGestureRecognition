@@ -1,0 +1,2 @@
+c:\users\bfo\documents\visual studio 2015\Projects\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Debug\VLC-Gesture-Controller.exe.config
+O:\C#\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Debug\VLC-Gesture-Controller.exe.config
