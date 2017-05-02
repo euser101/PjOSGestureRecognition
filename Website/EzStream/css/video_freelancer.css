@@ -528,3 +528,7 @@ hr {
 .shortDesc {
   padding-top: 10px;
 }
+
+#id1{
+  visibility: hidden;
+}
