@@ -68,7 +68,7 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background: #7D5BA6;
+  background: #2C3E50;
   color: white;
 }
 header .container {
@@ -92,8 +92,9 @@ header .intro-text .skills {
 }
 @media (min-width: 768px) {
   header .container {
-    padding-top: 200px;
-    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 0px;
+      margin-bottom:0px;
   }
   header .intro-text .name {
     font-size: 4.75em;
@@ -203,18 +204,28 @@ section.success {
   margin: 0 auto;
 }
 #portfolio .portfolio-item .portfolio-link .caption {
-  background: #7D5BA6;
+  background: rgba(125,91,166,0);
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0;
   transition: all ease 0.5s;
   -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s; 
 }
+
+#portfolio .portfolio-item .portfolio-link .caption p{
+    visibility: hidden;
+}
+#portfolio .portfolio-item .portfolio-link .caption:hover p {
+    visibility:visible;
+}
+
+
 #portfolio .portfolio-item .portfolio-link .caption:hover {
-  opacity: 1;
+    background:rgba(44,62,80,0.9);
 }
+
+
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
   position: absolute;
   width: 100%;
@@ -376,8 +387,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   color: white;
-  background-color: #128f76;
-  border-color: #11866f;
+  background-color: #634785;
+  border-color: #634785;
 }
 .btn-success:active,
 .btn-success.active,
@@ -514,3 +525,43 @@ fieldset[disabled] .btn-success.active {
 div#maincontent {
   outline: none;
 }
+
+/*########### SlideShow #########*/
+
+#myCarousel{
+    height: 90vh;
+    width:100vw;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom:80px;
+}
+
+.slidecontainer{
+    padding-top:0px;
+    padding-left:0px;
+    margin-left:0px;
+    margin-top:0px;
+}
+
+.carousel-caption{
+    position: absolute;
+    top: 40%;
+}
+
+.carousel-caption h1{
+    color: white;
+    font-size: 60pt;
+}
+
+.carousel-caption p{
+    color: white;
+    font-size: 36pt;
+}
+
+.carousel-caption a{
+    color: white;
+    font-size: 36pt;
+}
+
+
+
