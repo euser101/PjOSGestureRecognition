@@ -28,7 +28,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script src="js/clipboard.js"></script>
 </head>
 
 <body id="page-top" class="index">
@@ -92,7 +92,9 @@
                 <span class="glyphicon glyphicon-sound-7-1"></span>
                 <span class="glyphicon glyphicon-stats"></span>
                 <p class="shortDesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
-                <a class="btn btn-primary" href="portfolio-item.html">View Project</i></a>
+                <!--<button class="btn btn-primary" onclick="copyToClipboard(document.getElementById('copy').innerHTML)"><i id="copy">View Project</i></button>-->
+                <p id="p1">LINK HERE</p>
+                <button class="btn btn-primary" onclick="copyToClipboard('#p1')">Copy Link</button>
             </div>
         </div>
         <!-- /.row -->
