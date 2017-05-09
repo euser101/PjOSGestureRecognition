@@ -22,6 +22,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -29,6 +30,8 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="js/clipboard.js"></script>
+    <script src="js/toTop.js"></script>
+    <script src="js/gif.js"></script>
 </head>
 
 <body id="page-top" class="index">
@@ -81,7 +84,7 @@
         <div class="row">
             <div class="col-md-7">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/800x400" alt="">
+                    <img class="img-responsive" src="img/thumbnail.jpg" alt="" onmouseover="hover(this);" onmouseout="unhover(this);"><!--http://placehold.it/800x400-->
                 </a>
             </div>
             <div class="col-md-5">
@@ -105,7 +108,7 @@
         <div class="row">
             <div class="col-md-7">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/800x400" alt="">
+                    <img class="img-responsive img-hover gif" src="img/thumbnail.jpg" alt="">
                 </a>
             </div>
             <div class="col-md-5">
@@ -208,7 +211,12 @@
             </div>
         </div>
         
+        <!-- Back to Top button-->
+        <!--<button onclick="toTop()" class="toTop" title="Go to top">Top</button>-->
+        <button onclick="topFunction()" id="toTop" title="Go to top">Top</button>
+<style>
 
+</style>
         <hr>
     <!-- VideFeed End-->
 
