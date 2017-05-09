@@ -36,13 +36,23 @@ namespace VLC_Gesture_Controller
 
         private void kamera_neuer_Frame(object sender, NewFrameEventArgs eventArgs)
         {
-            bild = new Bitmap(eventArgs.Frame);
+            if (bild != null)
+            {
+                bild.Dispose();
+            }
+            bild = (Bitmap)eventArgs.Frame.Clone();
+            Sprung_zurueck();
+            Leiser();
+            Start_Pause();
+            lauter();
+            sprung_vorwaerts();
+            Thread.Sleep(1000);
         }
 
-        public void Starten()
+        /*public void Starten()
         {
             while(true)
-            {
+            {   
                 Sprung_zurueck();
                 Leiser();
                 Start_Pause();
@@ -51,13 +61,13 @@ namespace VLC_Gesture_Controller
                 Thread.Sleep(1000);
             }
             
-        }
+        }*/
 
         //Erster Bereich
         public void Sprung_zurueck()
         {
             bild_ueberprüfen = bild;
-            bild_ueberprüfen = new Bitmap(bild);
+            //bild_ueberprüfen = new Bitmap(bild);
             int teile = bild_ueberprüfen.Width / 15;
             int bereich_zurueck = teile + teile;
 
@@ -70,11 +80,12 @@ namespace VLC_Gesture_Controller
                     farbegelbbild = bild_ueberprüfen.GetPixel(i, x).G;
                     farbeblaubild = bild_ueberprüfen.GetPixel(i, x).B;
 
-                    if (farberotbild >= 80 && farberotbild <= 230 && farbegelbbild >= 80 && farbegelbbild <= 230 && farbeblaubild >= 80 && farbeblaubild <= 230)
+                    if (farberotbild >= 245 && farberotbild <= 255 && farbegelbbild >= 80 && farbegelbbild <= 200 && farbeblaubild >= 0 && farbeblaubild <= 255)
                     {
-                        fokus_vlc();
+                        //fokus_vlc();
 
-                        SendKeys.Send("^{LEFT}");
+                        SendKeys.SendWait("^{LEFT}");
+                        return;
                     }
                 }
             }
@@ -84,7 +95,7 @@ namespace VLC_Gesture_Controller
         public void Leiser()
         {
             bild_ueberprüfen = bild;
-            bild_ueberprüfen = new Bitmap(bild);
+            //bild_ueberprüfen = new Bitmap(bild);
             int teile = bild_ueberprüfen.Width / 15;
             int start_bereich_leiser = 4 * teile;
             int end_bereich_leiser = 5 * teile;
@@ -97,10 +108,11 @@ namespace VLC_Gesture_Controller
                     farbegelbbild = bild_ueberprüfen.GetPixel(i, x).G;
                     farbeblaubild = bild_ueberprüfen.GetPixel(i, x).B;
 
-                    if (farberotbild >= 80 && farberotbild <= 230 && farbegelbbild >= 80 && farbegelbbild <= 230 && farbeblaubild >= 80 && farbeblaubild <= 230)
+                    if (farberotbild >= 245 && farberotbild <= 255 && farbegelbbild >= 80 && farbegelbbild <= 200 && farbeblaubild >= 0 && farbeblaubild <= 255)
                     {
-                        fokus_vlc();
-                        SendKeys.Send("^{DOWN}");
+                        //fokus_vlc();
+                        SendKeys.SendWait("^{DOWN}");
+                        return;
                     }
                 }
             }
@@ -110,8 +122,8 @@ namespace VLC_Gesture_Controller
         public void Start_Pause()
         {
             bild_ueberprüfen = bild;
-            bild_ueberprüfen = new Bitmap(bild);
-            int teile = bild_ueberprüfen.Width / 5;
+            //bild_ueberprüfen = new Bitmap(bild);
+            int teile = bild_ueberprüfen.Width / 15;
             int start_bereich_pause = 7 * teile;
             int end_bereich_pause = 8 * teile;
 
@@ -123,21 +135,23 @@ namespace VLC_Gesture_Controller
                     farbegelbbild = bild_ueberprüfen.GetPixel(i, x).G;
                     farbeblaubild = bild_ueberprüfen.GetPixel(i, x).B;
 
-                    if (farberotbild >= 80 && farberotbild <= 230 && farbegelbbild >= 80 && farbegelbbild <= 230 && farbeblaubild >= 80 && farbeblaubild <= 230)
+                    if (farberotbild >= 245 && farberotbild <= 255 && farbegelbbild >= 80 && farbegelbbild <= 200 && farbeblaubild >= 0 && farbeblaubild <= 255)
                     {
-                        fokus_vlc();
-                        SendKeys.Send(" ");
+                        //fokus_vlc();
+
+                        SendKeys.SendWait(" ");
+                        return;
                     }
                 }
             }
         }
-
+        
         //
         public void lauter()
         {
             bild_ueberprüfen = bild;
-            bild_ueberprüfen = new Bitmap(bild);
-            int teile = bild_ueberprüfen.Width / 5;
+            //bild_ueberprüfen = new Bitmap(bild);
+            int teile = bild_ueberprüfen.Width / 15;
             int start_bereich_lauter = 10 * teile;
             int end_bereich_lauter = 11 * teile;
 
@@ -149,10 +163,11 @@ namespace VLC_Gesture_Controller
                     farbegelbbild = bild_ueberprüfen.GetPixel(i, x).G;
                     farbeblaubild = bild_ueberprüfen.GetPixel(i, x).B;
 
-                    if (farberotbild >= 80 && farberotbild <= 230 && farbegelbbild >= 80 && farbegelbbild <= 230 && farbeblaubild >= 80 && farbeblaubild <= 230)
+                    if (farberotbild >= 245 && farberotbild <= 255 && farbegelbbild >= 80 && farbegelbbild <= 200 && farbeblaubild >= 0 && farbeblaubild <= 255)
                     {
-                        fokus_vlc();
-                        SendKeys.Send("^{UP}");
+                       // fokus_vlc();
+                        SendKeys.SendWait("^{UP}");
+                        return;
                     }
                 }
             }
@@ -161,8 +176,8 @@ namespace VLC_Gesture_Controller
         public void sprung_vorwaerts()
         {
             bild_ueberprüfen = bild;
-            bild_ueberprüfen = new Bitmap(bild);
-            int teile = bild_ueberprüfen.Width / 5;
+            //bild_ueberprüfen = new Bitmap(bild);
+            int teile = bild_ueberprüfen.Width / 15;
             int start_bereich_vorwaerts = 13 * teile;
             int end_bereich_vorwaerts = 14 * teile; ;
 
@@ -174,10 +189,11 @@ namespace VLC_Gesture_Controller
                     farbegelbbild = bild_ueberprüfen.GetPixel(i, x).G;
                     farbeblaubild = bild_ueberprüfen.GetPixel(i, x).B;
 
-                    if (farberotbild >= 80 && farberotbild <= 230 && farbegelbbild >= 80 && farbegelbbild <= 230 && farbeblaubild >= 80 && farbeblaubild <= 230)
+                    if (farberotbild >= 245 && farberotbild <= 255 && farbegelbbild >= 80 && farbegelbbild <= 200 && farbeblaubild >= 0 && farbeblaubild <= 255)
                     {
-                        fokus_vlc();
-                        SendKeys.Send("^{RIGHT}");
+                        //fokus_vlc();
+                        SendKeys.SendWait("^{RIGHT}");
+                        return;
                     }
                 }
             }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace VLC_Gesture_Controller
 {
@@ -12,7 +13,8 @@ namespace VLC_Gesture_Controller
         {
             Bilderkennung erkennung = new Bilderkennung();
             erkennung.Kamera_Starten();
-            erkennung.Starten();
+            Thread.Sleep(5000);
+            //erkennung.Starten();
         }
     }
 }

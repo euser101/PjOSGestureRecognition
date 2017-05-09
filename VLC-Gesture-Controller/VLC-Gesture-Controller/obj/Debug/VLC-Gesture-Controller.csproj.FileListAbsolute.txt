@@ -1,2 +1,11 @@
 c:\users\bfo\documents\visual studio 2015\Projects\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Debug\VLC-Gesture-Controller.exe.config
 O:\C#\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Debug\VLC-Gesture-Controller.exe.config
+C:\Users\bfo\Downloads\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Debug\VLC-Gesture-Controller.exe.config
+C:\Users\bfo\Downloads\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Debug\VLC-Gesture-Controller.exe
+C:\Users\bfo\Downloads\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Debug\VLC-Gesture-Controller.pdb
+C:\Users\bfo\Downloads\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Debug\AForge.xml
+C:\Users\bfo\Downloads\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Debug\AForge.Video.xml
+C:\Users\bfo\Downloads\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\bfo\Downloads\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\obj\Debug\VLC-Gesture-Controller.csprojResolveAssemblyReference.cache
+C:\Users\bfo\Downloads\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\obj\Debug\VLC-Gesture-Controller.exe
+C:\Users\bfo\Downloads\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\obj\Debug\VLC-Gesture-Controller.pdb
