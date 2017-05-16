@@ -135,6 +135,14 @@ header .intro-text .skills {
   color: white;
   background: #7D5BA6;
 }
+#active1 {
+  color: white;
+  background: #7D5BA6;
+}
+#active1 a:hover {
+  color: white;
+  background: #7D5BA6;
+}
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
@@ -172,14 +180,6 @@ header .intro-text .skills {
   .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
   }
-}
-#active1 {
-  color: white;
-  background: #7D5BA6;
-}
-#active1 a:hover {
-  color: white;
-  background: #7D5BA6;
 }
 section {
   padding: 100px 0;
@@ -332,8 +332,8 @@ footer .footer-below {
 }
 .btn-primary {
   color: white;
-  background-color: #7D5BA6;
-  border-color: #7D5BA6;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
   font-weight: 700;
 }
 .btn-primary:hover,
@@ -439,7 +439,65 @@ fieldset[disabled] .btn-success.active {
   border-radius: 100%;
   line-height: 28px;
 }
-
+.portfolio-modal .modal-content {
+  border-radius: 0;
+  background-clip: border-box;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  min-height: 100%;
+  padding: 100px 0;
+  text-align: center;
+}
+.portfolio-modal .modal-content h2 {
+  margin: 0;
+  font-size: 3em;
+}
+.portfolio-modal .modal-content img {
+  margin-bottom: 30px;
+}
+.portfolio-modal .modal-content .item-details {
+  margin: 30px 0;
+}
+.portfolio-modal .close-modal {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background-color: transparent;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+.portfolio-modal .close-modal:hover {
+  opacity: 0.3;
+}
+.portfolio-modal .close-modal .lr {
+  height: 75px;
+  width: 1px;
+  margin-left: 35px;
+  background-color: #2C3E50;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(45deg);
+  /* Safari and Chrome */
+  z-index: 1051;
+}
+.portfolio-modal .close-modal .lr .rl {
+  height: 75px;
+  width: 1px;
+  background-color: #2C3E50;
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -webkit-transform: rotate(90deg);
+  /* Safari and Chrome */
+  z-index: 1052;
+}
+.portfolio-modal .modal-backdrop {
+  opacity: 0;
+  display: none;
+}
 #skipnav a {
   padding: 6px;
   position: absolute;
@@ -465,213 +523,175 @@ div#maincontent {
   outline: none;
 }
 
-#toTop {
-  opacity: 0.5;
+/*-----------------------------------------------------------------------------------------------------
+Zahlen auflistung _ GetStarted
+------------------------------------------------------------------------------------------------------*/
+
+.containercircletwo {
+  background: #7D5BA6;
+  /* inline-box hack to eliminate white space */
+  font-size: 0;
   text-align: center;
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: #7D5BA6;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  padding-left: 20px;
-  padding-right: 20px; 
-  border-radius: 10px;
+  margin-left: -110%;
 }
 
-#toTop:hover {
-
-  background-color: #57455b;
-}
-
-
-
-/*Own rules defined by euser101*/
-
-
-/*Styles for videos*/
-
-.row2{
-    margin-top:10px;
-}
-.row {
-  margin-top: 5px;
-    /*margin-right: -15px;
-    margin-left: -15px;*/
-    margin-left: 2px;
-    margin-right: 2px;
-}
-
-/*HD-Glyphicon*/
-.glyphicon {
-  /*position: absolute;*/
-  font-size: 2.5em;
-  margin: 5px;
-  /*padding-top: 2.5%;
-  padding-bottom: 3%;
-  padding-left: 50%;*/
-}
-
-/*
-@media (max-width: 480px) {
-      .glyphicon {
-      /*position: absolute;
-      font-size: 3em;
-      padding-left: 10%;
-      padding-top: 1%;
-      padding-bottom: 4%;
-      padding-left: 50%;
-    }
-}*/
-
-/*Video Style*/
-/*.col-md-7{
-  padding-top: 10%;
-  padding-left: 10%;
-}*/
-
-@media (min-width: 1700px) {
-.row{
-  padding-top: 10%;
-  padding-left: 10%;
-}
-
-@media (max-width: 1700px) {
-  .row{ 
-    padding-top: 10%;
-    padding-left: 10%;
-  }
-}
-
-.col-md-5 {
-  padding-top: 2%;
-}
-
-.btn-primary{
-  margin-top: 5%;
-}
-
-hr {
-  margin-top: 5%;
-}
-
-.shortDesc {
-  padding-top: 10px;
-}
-
-#id1{
-  visibility: hidden;
-}
+.circle {
     
+  display: inline-block;
+  min-width: 5%;
+  /* to allow placement of numbers on top of circles instead of below them */
+  white-space: nowrap;
+}
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
+.circle:before {
+    
+  border-radius: 50%;
+  /* = 15%, almost gives us viewport width unit (15vw) */
+  width: 20%;
+  padding-bottom: 20%;
+  /* this way we should have 1px gap between circles */
+  margin: 15px .10px;
+  background: white;
+  content: '';
+  display: inline-block;
+  /* circle to the middle, so that... [1] */
+  vertical-align: middle;
+  /* to use viewport based units we can safely override the old units in this way */
+  padding-bottom: 0vw;
+  width: 8vw;
+  height: 8vw;
+}
+
+.circle p {
+    
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:black;
+  display: inline-block;
+  font-size: 45pt;
+  /* -.5em = white space between p elements... */
+  padding: 0;
+  /* ... text can be middle too! [1] */
+  vertical-align: middle;
+  white-space: normal;
+  width: 100%;
+  /* for some reason that I can't figure out right now...
+    viewport units eliminate the white space issue */
+  margin: 0 0 0 -11.6vw;
+  width: 15vw;
+}
+.Textnextcircle p {
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: normal;
+	font-size: 17px;
+	display: inline-flex;
+	width: 65vw;
+	padding-left:1%;
+	margin-top: -15%;
+	margin-left: 54%;
+	color: white;
 
 }
 
-/* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-/* Styles */
+.StepbyStep h2{
+	margin-top: 5%;
+	position: center;
 }
 
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-/* Styles */
+.StepbySteptwo h2{
+	margin-bottom: 5%;
+}
+@media screen and (max-width: 1620px){
+	.containercircletwo{
+		  margin-left: -80%;
+	}
 }
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-/* Styles */
+
+@media screen and (max-width: 780px){
+	.circle p{
+		font-size: 25pt;
+	}
+	.Textnextcircle p{
+		font-size: 17px;
+	}
 }
-
-/* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-/* Styles */
+@media screen and (max-width: 440px){
+	.circle p{
+		font-size: 20pt;
+	}
+	.Textnextcircle p{
+		font-size: 12px;
+	}
 }
-
-/* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-/* Styles */
+.btn-violet {
+  color: #7D5BA6;
+  font-size: 30px;
+  border: solid 2px #7D5BA6;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  margin-left: 65%;
+  margin-top:-40%;
 }
-
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
-
-}
-
-/* Large screens ----------- */
-@media only screen 
-and (min-width : 1824px) {
-/* Styles */
-}
-
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
-}
-
-#toTop {
-  opacity: 0.5;
-  text-align: center;
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: #7D5BA6;
+.btn-violet:hover,
+.btn-violet:focus,
+.btn-violet:active,
+.btn-violet.active {
   color: white;
-  cursor: pointer;
-  padding: 15px;
-  padding-left: 20px;
-  padding-right: 20px; 
-  border-radius: 10px;
+  background: #7D5BA6;
+  border: solid 2px #7D5BA6;
 }
 
-#toTop:hover {
 
-  background-color: #57455b;
+/* Download now */
+.containertwo {
+  position: relative;
+  width: 50%;
 }
 
-.img-responsive{   
-  webkit-transition: 1s all;   
-    -webkit-transition-delay: 1s; 
-    -moz-transition: s all;   
-    -moz-transition-delay: 1s; 
-    -ms-transition: 1s all;   
-    -ms-transition-delay: 1s; 
-    -o-transition: 1s all;   
-    -o-transition-delay: 1s; 
-    transition: 1s all;   
-    transition-delay: 1s; 
-  
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #cecece;
 }
-.img-responsive:hover{
-  -webkit-transition-delay: 1s;
-    -moz-transition-delay: 1s;
-    -ms-transition-delay: 1s;
-    -o-transition-delay: 1s;
-    transition-delay: 1s;
+
+.containertwo:hover .overlay {
+  opacity: 1;
 }
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 800px){
+	.btn-violet{
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-top: 5%;
+	}
+	.image {
+		margin-left: 50%;
+	}
+	.overlay{
+		margin-left: 50%;
+	}
+}
+/* Download now end */

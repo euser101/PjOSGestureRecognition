@@ -11,6 +11,7 @@
 
     <title>EzStream | Videos</title>
 
+
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -47,7 +48,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">EzStream</a>
+                <a class="navbar-brand" href="index.html" style="font-size:30px;">EzStream</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,19 +58,19 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">FEATURES</a>
+                        <a href="index.html#portfolio">FEATURES</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">ABOUT</a>
+                        <a href="index.html#about">ABOUT</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#contact">CONTACT</a>
+                        <a href="index.html#contact">CONTACT</a>
                     </li>
 					<li>
-                        <a >GET STARTED</a>
+                        <a href="GetStarted.html">GET STARTED</a>
                     </li>
-					<li>
-                        <a >VIDEOS</a>
+					<li id="active1">
+                        <a href="#">VIDEOS</a>
                     </li>
 					
                 </ul>
@@ -84,7 +85,7 @@
         <div class="row">
             <div class="col-md-7">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive" src="img/thumbnail.jpg" alt="" onmouseover="hover(this);" onmouseout="unhover(this);"><!--http://placehold.it/800x400-->
+                    <img class="img-responsive" src="img/Videos/thumbnail.jpg" alt="" onmouseover="hover(this, 'img/Videos/2.gif');" onmouseout="unhover(this, 'img/Videos/thumbnail.jpg');"><!--http://placehold.it/800x400-->
                 </a>
             </div>
             <div class="col-md-5">
@@ -108,7 +109,7 @@
         <div class="row">
             <div class="col-md-7">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover gif" src="img/thumbnail.jpg" alt="">
+                    <img class="img-responsive img-hover gif" src="img/Videos/thumbnail.jpg" alt="" onmouseover="hover(this, 'img/Videos/2.gif');" onmouseout="unhover(this, 'img/Videos/thumbnail.jpg');">
                 </a>
             </div>
             <div class="col-md-5">
@@ -226,53 +227,47 @@
     </header>
 
     
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>3481 Melrose Place
-                            <br>Beverly Hills, CA 90210</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Google Plus</span><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Dribble</span><i class="fa fa-fw fa-dribbble"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>About Freelancer</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+<!-- Footer -->
+        <footer class="text-center">
+            <div class="footer-above">
+                <div class="container">
+                    <div class="row2">
+                        <div class="footer-col col-md-4">
+                            <h3>Location</h3>
+                            <p>3930 Visp
+                                <br>Gewerbestrasse 2 </p>
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3>Find us here</h3>
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="https://github.com/euser101/PjOSGestureRecognition" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-github"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://plus.google.com" class="btn-social btn-outline"><span class="sr-only">Google Plus</span><i class="fa fa-fw fa-google-plus"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3>About <span style="text-transform:none;">EzStream</span></h3>
+                            <p>EzStream is a free to use, open source, gesture controlled streaming service based on VLC Media Player.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; Your Website 2016
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row2" >
+                        <div class="col-lg-12">
+                            Copyright &copy; EzStream 2017
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">

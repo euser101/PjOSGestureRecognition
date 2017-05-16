@@ -527,13 +527,27 @@ div#maincontent {
 }
 
 /*########### SlideShow #########*/
+#maincontent{
+    margin: 0px;
+    padding:0px;
+    width: 100%;
+    height: 100%;
+    
+}
 
+#picture_carousel{
+    height: auto;
+    margin-top:25px;
+}
+   
 #myCarousel{
-    height: 90vh;
-    width:100vw;
+    height: 100%;
+    width:100%;
     margin: 0px;
     padding: 0px;
-    margin-bottom:80px;
+}
+.carousel-inner{
+    background-color:white;
 }
 
 .slidecontainer{
@@ -562,6 +576,25 @@ div#maincontent {
     color: white;
     font-size: 36pt;
 }
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+    color:white;
+}
+
+@media (max-width: 570px){
+    #maincontent{
+        display:none;
+    }
+    
+    #portfolio h2{
+        margin-top:40px;
+    }
+   
+    
+}
+
+
 
 
 
