@@ -535,10 +535,13 @@ div#maincontent {
   padding-left: 10%;
 }*/
 
+
 @media (min-width: 1700px) {
 .row{
   padding-top: 10%;
   padding-left: 10%;
+}
+
 }
 
 @media (max-width: 1700px) {
@@ -546,6 +549,7 @@ div#maincontent {
     padding-top: 10%;
     padding-left: 10%;
   }
+
 }
 
 .col-md-5 {
@@ -614,13 +618,21 @@ and (orientation : portrait) {
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1224px) {
+	
+}
 
+@media only screen 
+and (max-width : 1224px) {
+    #first_row{
+		margin-top:10%;
+	}
 }
 
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1824px) {
 /* Styles */
+
 }
 
 /* iPhone 4 ----------- */
