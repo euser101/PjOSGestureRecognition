@@ -25,20 +25,40 @@ namespace VLC_Gesture_Controller
         int farbegelbbild;
         int farbeblaubild;
 
+        public void VLC_Starten(string arguments)
+        {
+            string vlcPath = @"C:\Program Files\VideoLAN\VLC\VLC.exe";
+            //string arguments = "http://10.1.34.115:8080/";
+
+            Process.Start(vlcPath, arguments);    
+        }
+
         public void Kamera_Starten()
         {
-            FilterInfoCollection videoquellen = new FilterInfoCollection(FilterCategory.VideoInputDevice); ;
-            VideoCaptureDevice kamera;
-            kamera = new VideoCaptureDevice(videoquellen[0].MonikerString);
-            kamera.NewFrame += new NewFrameEventHandler(kamera_neuer_Frame);
-            kamera.Start();
+            try
+            {
+                FilterInfoCollection videoquellen = new FilterInfoCollection(FilterCategory.VideoInputDevice); ;
+                VideoCaptureDevice kamera;
+                kamera = new VideoCaptureDevice(videoquellen[0].MonikerString);
+                kamera.NewFrame += new NewFrameEventHandler(kamera_neuer_Frame);
+                kamera.Start();
+            }
+            catch
+            {
+                MessageBox.Show("No camera found!");
+                System.Environment.Exit(-1);
+            }
         }
 
         private void kamera_neuer_Frame(object sender, NewFrameEventArgs eventArgs)
-        {
+        {   
             if (bild != null)
             {
                 bild.Dispose();
+            }
+            if (VLC_killed())
+            {
+                System.Environment.Exit(-1);
             }
             bild = (Bitmap)eventArgs.Frame.Clone();
             Sprung_zurueck();
@@ -48,20 +68,6 @@ namespace VLC_Gesture_Controller
             sprung_vorwaerts();
             Thread.Sleep(1000);
         }
-
-        /*public void Starten()
-        {
-            while(true)
-            {   
-                Sprung_zurueck();
-                Leiser();
-                Start_Pause();
-                lauter();
-                sprung_vorwaerts();
-                Thread.Sleep(1000);
-            }
-            
-        }*/
 
         //Erster Bereich
         public void Sprung_zurueck()
@@ -199,7 +205,23 @@ namespace VLC_Gesture_Controller
             }
         }
 
-        [DllImport("user32.dll")]
+
+        //Überprüft, ob VLC geschlossen ist
+        public bool VLC_killed()
+        {
+            if (Process.GetProcessesByName("vlc").Length > 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+
+
+        /*[DllImport("user32.dll")]
         internal static extern IntPtr SetForegroundWindow(IntPtr hWnd);
 
         [DllImport("user32.dll")]
@@ -218,6 +240,6 @@ namespace VLC_Gesture_Controller
                     SetForegroundWindow(hWnd);
                 }
             }
-        }
+        }*/
     }
 }

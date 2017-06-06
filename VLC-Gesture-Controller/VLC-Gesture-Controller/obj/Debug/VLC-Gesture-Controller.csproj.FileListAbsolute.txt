@@ -9,3 +9,6 @@ C:\Users\bfo\Downloads\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-
 C:\Users\bfo\Downloads\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\obj\Debug\VLC-Gesture-Controller.csprojResolveAssemblyReference.cache
 C:\Users\bfo\Downloads\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\obj\Debug\VLC-Gesture-Controller.exe
 C:\Users\bfo\Downloads\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\obj\Debug\VLC-Gesture-Controller.pdb
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Debug\VLC-Gesture-Controller.exe.config
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\obj\Debug\VLC-Gesture-Controller.exe
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\obj\Debug\VLC-Gesture-Controller.pdb

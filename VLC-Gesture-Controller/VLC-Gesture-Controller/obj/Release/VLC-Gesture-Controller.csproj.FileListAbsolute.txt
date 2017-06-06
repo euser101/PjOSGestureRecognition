@@ -1,0 +1,14 @@
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Release\VLC-Gesture-Controller.exe.config
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Release\VLC-Gesture-Controller.exe
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Release\VLC-Gesture-Controller.pdb
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Release\AForge.dll
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Release\AForge.Video.DirectShow.dll
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Release\AForge.Video.dll
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Release\AForge.xml
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Release\AForge.Video.xml
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\bin\Release\AForge.Video.DirectShow.xml
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\obj\Release\VLC-Gesture-Controller.csprojResolveAssemblyReference.cache
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\obj\Release\VLC-Gesture-Controller.exe
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\obj\Release\VLC-Gesture-Controller.pdb
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\obj\Release\VLC_Gesture_Controller.Properties.Resources.resources
+D:\PjOSGestureRecognition-master\VLC-Gesture-Controller\VLC-Gesture-Controller\obj\Release\VLC-Gesture-Controller.csproj.GenerateResource.Cache
